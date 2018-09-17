@@ -1,0 +1,80 @@
+<div class="container">
+	<!-- Top spacing Div starts -->
+	<div class="row">
+			<br>
+			<br>
+			<br>
+			<br>
+          
+	</div>
+     <!-- Top spacing Div ends --> 
+	 
+    <div class="row">
+		<!-- Canvas Div Starts -->   
+		<div class="col-lg-6 ">
+				<div class="bgimg"></div>  
+				<div class="padT30"></div>
+				<div class="padL30">
+					<canvas id="c" width="350" height="300"> </canvas>
+				</div>
+	   
+		</div>
+		<!-- Canvas Div Starts -->  
+        
+		<div class="col-lg-6 card">
+		
+			<br>
+			<br>
+			
+			<div class="canvasContentRight ">
+
+				<div style="display:inline-block;vertical-align:middle;">
+					
+					<!-- Upload Multiple Images  -->
+						<label id="#bb">Click to Upload an Image
+							<input type="file" id="File"   size="60" accept='image/*' onchange="loadImg(event)" style="color:white" multiple>
+						</label> 
+					
+					<!-- Add Text to Canvas  -->
+					<button ng-click='addText();' class="addTxtBtn">Add Text</button>
+					
+				</div>
+				
+					<br>
+					<!-- Undo Canvas Modifications -->
+					<button type="button" ng-click='undo()' class="undoBtn" >Undo</button>
+					
+					<!-- Redo Canvas Modifications -->
+					<button type="button" ng-click='redo()' id="redoBtn" class="redoBtn" disabled>Redo</button>
+					
+					<!-- Delete Active element -->
+					<button type="button" ng-click='delete()' class="redoBtn" >Delete</button>
+				
+					<br>
+					
+				<!-- Save Canvas to MySql DB	 -->
+				<div style="display:inline-block;vertical-align:middle;">
+					<button type="button" ng-click='save()' class="saveBtn" >Save Changes to Db</button>
+				
+					<!-- Clear the Content		 -->
+					<button type="button"  ng-click='removeAll()' class="ClearAll removeBtn" >Remove All changes</button>
+				
+				</div>
+					<br>
+				
+				<!-- Fetch Saved Changes from DB -->
+				<button type="button" ng-click='fetch()' class="reOpen">Click to Re-Open your Saved Changes</button>
+				
+				<br>
+				<!-- Load selected Canvas -->
+				
+				<select id="selectOption" style="display:none" ng-click='changeFunc()'></select> 
+				
+				
+			</div>
+			
+        </div>
+    
+	</div>
+    
+</div>

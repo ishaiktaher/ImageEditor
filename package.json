@@ -1,0 +1,15 @@
+{
+  "name": "ShaikTaher",
+  "version": "1.0.0",
+  "description": "Image Editor",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Shaik Taher",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  }
+}
